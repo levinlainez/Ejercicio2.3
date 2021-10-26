@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="3dp"
+    app:cardBackgroundColor="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/perfilImagen"
+            android:src="@drawable/ic_person_black"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            app:civ_border_width="1dp"
+            app:civ_border_color="@color/white"
+            app:civ_border_overlay="true"/>
+
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/moreBtn"
+            android:layout_toEndOf="@id/perfilImagen"
+            android:layout_toRightOf="@id/perfilImagen"
+            android:layout_toLeftOf="@id/moreBtn">
+
+            <!--Descripcion-->
+            <TextView
+                android:id="@+id/descripcionTv"
+                android:text="Descripcion"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                />
+
+
+        </LinearLayout>
+
+        <!--Para mostrar opciones como eliminar, editar, etc.-->
+        <ImageButton
+            android:id="@+id/moreBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_more_black"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
